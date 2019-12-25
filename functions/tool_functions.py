@@ -7,8 +7,8 @@ def create_tool(data):
     try:
         tool ={
             'id': str(uuid.uuid4()),
-            'type': ['tool']["type"],
-            'name': ['tool']['name']
+            'type': data['tool']["type"],
+            'name': data['tool']['name']
         }
         db['tool'].save(tool)
         return tool['id']

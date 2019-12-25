@@ -1,8 +1,8 @@
 from flask import Flask
-from routes.routes import routes as rota
+from routes.route import routes
 
 def create_app():
     app = Flask(__name__)
-    app.register_blueprint(rota)
+    app.register_blueprint(routes)
     return app
 
